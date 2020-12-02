@@ -1,0 +1,13 @@
+version: "2"
+services:
+  redis:
+    container_name: ens-redis
+    image: redis:6
+    ports:
+      - 6380:6379
+    volumes:
+      - ens_redis:/data
+    restart: always
+
+volumes:
+    ens_redis:

@@ -1,0 +1,16 @@
+apps:
+  - name: auto1
+    script: "./dist/index.js"
+    args: "compare-cars --daemonize '0 7-18/2 * * 1-5' --min-percent 0.2 1 40"
+#    cwd: /home/developer/auto1
+    exec_interpreter: node
+    exec_mode: fork_mode
+    max_memory_restart: 2048M
+    env:
+      NODE_ENV: production
+#  - name: auto1-admin
+#    script: "./dist/admin.js"
+#    args: ""
+##    cwd: /home/developer/auto1
+#    exec_interpreter: node
+#    exec_mode: fork_mode
